@@ -5,19 +5,19 @@ games = ['number guesser', "rock paper scissors", "silksong", 'quizzard']
 def partyGame():
     print("Welcome to the party game!")
     print("Here are the games you can play!")
-    for game in games:
+    for game in games: #loop
         print(game)
-    choice = input("What game would you like to play?")
-    if choice == "number guesser":
+    choice = input("What game would you like to play?") #input
+    if choice == "number guesser": #condition
         NumberGuesser()
-    elif choice == "rock paper scissors":
+    elif choice == "rock paper scissors": #condition
         RockPaperScissors()
-    elif choice == "silksong":
-        print("This game is currently in development it wil release early 20025!")
-    elif choice == "quizzard":
+    elif choice == "silksong": #condition
+        print("This game is currently in development it wil release early 20025!")#return
+    elif choice == "quizzard": #condition
         quizzard()
-    else:
-        print("That is not a valid game! please choose a game from the list!")
+    else: #condition
+        print("That is not a valid game! please choose a game from the list!") #return
         partyGame()
 
 def quizzard():
@@ -75,35 +75,35 @@ def quizzard():
                 question = random.choice(questions["math"][quest1])
                 answer = questions["math"][f"{quest1}Answers"][questions["math"][quest1].index(question)]
                 useranswer = int(input(f"{question}"))
-                if useranswer == answer:
-                    print("Correct!")
+                if useranswer == answer: #condition
+                    print("Correct!") #return
                     points = points + 1
-                else:
-                    print(f"Incorrect! the answer was {answer}")
-            elif subject == "science":
+                else: #condition
+                    print(f"Incorrect! the answer was {answer}") #return
+            elif subject == "science": #condition
                 quest1 = random.choice(questions["science"]["subjects"])
                 question = random.choice(questions["science"][quest1])
                 answer = questions["science"][f"{quest1}Answers"][questions["science"][quest1].index(question)]
                 useranswer = (input(f"{question}"))
-                if useranswer == answer:
-                    print("Correct!")
+                if useranswer == answer: #condition
+                    print("Correct!") #return
                     points = points + 1
                 else:
-                    print(f"Incorrect! the answer was {answer}")
-            elif subject == "history":
+                    print(f"Incorrect! the answer was {answer}") #condition
+            elif subject == "history": #condition
                 quest1 = random.choice(questions["history"]["subjects"])
                 question = random.choice(questions["history"][quest1])
                 answer = questions["history"][f"{quest1}Answers"][questions["history"][quest1].index(question)]
                 useranswer = int(input(f"{question}"))
-                if useranswer == answer:
-                    print("Correct!")
+                if useranswer == answer: #condition
+                    print("Correct!") #return
                     points = points + 1
-                else:
-                    print(f"Incorrect! the answer was {answer}")
-            if points == 5:
-                print("You win! you beat the single player quiz!")   
+                else: #condition
+                    print(f"Incorrect! the answer was {answer}") #return
+            if points == 5: #condition
+                print("You win! you beat the single player quiz!")   #return
 
-        elif multiplayer == True:
+        elif multiplayer == True: #condition
             if subject == "math":
                 quest1 = random.choice(questions["math"]["subjects"])
                 question = random.choice(questions["math"][quest1])
